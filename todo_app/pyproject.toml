@@ -1,0 +1,25 @@
+[project]
+name = "todo-app"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "MSM",email = "smidmi@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "typer (>=0.15.2,<0.16.0)",
+    "pydantic (>=2.10.6,<3.0.0)",
+    "rich (>=13.9.4,<14.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "todo_app", from = "src"}]
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.5"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
